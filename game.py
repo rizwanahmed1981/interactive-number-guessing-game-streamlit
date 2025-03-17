@@ -74,6 +74,7 @@ if st.session_state.game_active:
                 st.session_state.low = st.session_state.guess + 1
             elif feedback == "Correct (C)":
                 st.balloons()
+                
                 st.success(f"🎉 The computer guessed your number **{st.session_state.guess}** correctly in {st.session_state.attempts} attempts! 👌")
                 st.session_state.game_active = False
                 if st.button("Play Again"):
